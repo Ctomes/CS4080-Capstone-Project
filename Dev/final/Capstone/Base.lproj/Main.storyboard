@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BOb-oA-Bhm">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Capstone-->
+        <scene sceneID="L1K-4L-15f">
+            <objects>
+                <viewController id="tcB-8I-IdY" customClass="ViewController" customModule="Capstone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tVF-VM-PxG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image" translatesAutoresizingMaskIntoConstraints="NO" id="tGM-ES-qvI">
+                                <rect key="frame" x="16" y="111" width="343" height="213"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="tGM-ES-qvI" secondAttribute="height" multiplier="343:213" id="vB6-O3-nom"/>
+                                </constraints>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-1" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="IpQ-Cs-828">
+                                <rect key="frame" x="14" y="403" width="347" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="gammaValueChanged:" destination="tcB-8I-IdY" eventType="valueChanged" id="AcR-li-RNx"/>
+                                    <action selector="sliderValueChanged:" destination="tcB-8I-IdY" eventType="valueChanged" id="53Q-7h-Gdi"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gamma" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4hQ-8w-TeP">
+                                <rect key="frame" x="16" y="374" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-1" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="tTa-bY-Voz">
+                                <rect key="frame" x="14" y="470" width="347" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="gammaValueChanged:" destination="tcB-8I-IdY" eventType="valueChanged" id="nDz-9V-9iL"/>
+                                    <action selector="hueValueChanged:" destination="tcB-8I-IdY" eventType="valueChanged" id="IVN-eM-hcI"/>
+                                    <action selector="sliderValueChanged:" destination="tcB-8I-IdY" eventType="valueChanged" id="f1v-Ug-TcY"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TBk-J9-DXk">
+                                <rect key="frame" x="16" y="441" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-1" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ReE-LC-Ba9">
+                                <rect key="frame" x="14" y="537" width="347" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="gammaValueChanged:" destination="tcB-8I-IdY" eventType="valueChanged" id="Piv-gs-nrz"/>
+                                    <action selector="sliderValueChanged:" destination="tcB-8I-IdY" eventType="valueChanged" id="O6k-nM-w70"/>
+                                    <action selector="vibranceValueChanged:" destination="tcB-8I-IdY" eventType="valueChanged" id="vZr-gd-6Xj"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vibrance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sJu-Jv-Aw7">
+                                <rect key="frame" x="16" y="508" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-2" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="GQ8-dK-eV1">
+                                <rect key="frame" x="14" y="604" width="347" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="gammaValueChanged:" destination="tcB-8I-IdY" eventType="valueChanged" id="oUh-2Y-Gj6"/>
+                                    <action selector="hueValueChanged:" destination="tcB-8I-IdY" eventType="valueChanged" id="zJt-ZC-tbZ"/>
+                                    <action selector="sharpnessValueChanged:" destination="tcB-8I-IdY" eventType="valueChanged" id="pvn-Kb-Pqi"/>
+                                    <action selector="sliderValueChanged:" destination="tcB-8I-IdY" eventType="valueChanged" id="r8F-rg-Px7"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sharpness" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="juj-Dw-MTI">
+                                <rect key="frame" x="16" y="575" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="15H-GV-uV9">
+                                <rect key="frame" x="147" y="642" width="81" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Save"/>
+                                <connections>
+                                    <action selector="saveButtonPressed:" destination="tcB-8I-IdY" eventType="touchUpInside" id="HGj-tm-jdM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fiB-cd-sKz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tGM-ES-qvI" firstAttribute="trailing" secondItem="tVF-VM-PxG" secondAttribute="trailingMargin" id="ONy-1G-cg8"/>
+                            <constraint firstItem="tGM-ES-qvI" firstAttribute="top" secondItem="fiB-cd-sKz" secondAttribute="top" constant="20" id="XH9-wZ-ji2"/>
+                            <constraint firstItem="tGM-ES-qvI" firstAttribute="leading" secondItem="tVF-VM-PxG" secondAttribute="leadingMargin" id="imx-WI-bQ3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Capstone" id="HQF-Fr-P6c">
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="igV-ES-3Qp">
+                            <connections>
+                                <action selector="loadPhoto" destination="tcB-8I-IdY" id="gwm-YO-tBn"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="gammaLabel" destination="4hQ-8w-TeP" id="m8M-96-dqg"/>
+                        <outlet property="gammaSlider" destination="IpQ-Cs-828" id="0DC-7V-HJw"/>
+                        <outlet property="hueLabel" destination="TBk-J9-DXk" id="c8v-I7-rcd"/>
+                        <outlet property="hueSlider" destination="tTa-bY-Voz" id="ucn-37-EG1"/>
+                        <outlet property="imageView" destination="tGM-ES-qvI" id="1Gb-iG-3Zy"/>
+                        <outlet property="saveButton" destination="15H-GV-uV9" id="hmg-oI-3JK"/>
+                        <outlet property="sharpnessLabel" destination="juj-Dw-MTI" id="1Kg-NQ-gi7"/>
+                        <outlet property="sharpnessSlider" destination="GQ8-dK-eV1" id="KUr-27-tOE"/>
+                        <outlet property="vibranceLabel" destination="sJu-Jv-Aw7" id="5Uf-4A-M9D"/>
+                        <outlet property="vibranceSlider" destination="ReE-LC-Ba9" id="WqX-Oe-iPS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v6I-u6-9aI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1036" y="201.72413793103451"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6I2-pM-7oc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BOb-oA-Bhm" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OGG-rt-MHJ">
+                        <rect key="frame" x="0.0" y="47" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="tcB-8I-IdY" kind="relationship" relationship="rootViewController" id="duZ-JN-VIW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bbq-rV-ypp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="93.599999999999994" y="201.72413793103451"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="image" width="320" height="213"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
