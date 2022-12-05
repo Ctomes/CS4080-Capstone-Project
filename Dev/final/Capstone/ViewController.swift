@@ -109,6 +109,17 @@ extension ViewController {
 
 extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
   
+  func resetValues() {
+    gammaSlider.value = 0.0
+    gammaLabel.text = "Gamma"
+    vibranceSlider.value = 0.0
+    vibranceLabel.text = "Vibrance"
+    hueSlider.value = 0.0
+    hueLabel.text = "Hue"
+    sharpnessSlider.value = 0.0
+    sharpnessLabel.text = "Sharpness"
+    
+  }
   func imagePickerController(
     _ picker: UIImagePickerController,
     didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
@@ -116,13 +127,14 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
       guard let selectedImage = info[.originalImage] as? UIImage else { return }
       
       let ciImage = CIImage(image: selectedImage)
+      resetValues()
       filter.setValue(ciImage, forKey: kCIInputImageKey)
-      
       orientation = selectedImage.imageOrientation
       applyFilters()
       
       dismiss(animated: true)
       saveButton.tintColor = UIColor.systemBlue
       saveButton.setTitle("Save", for: .normal)
+
   }
 }
